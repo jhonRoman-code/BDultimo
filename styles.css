@@ -1,0 +1,483 @@
+/* === General === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #eaf2f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Navbar === */
+.navbar {
+  background: #154360;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  height: 75px;
+  width: auto;
+}
+
+.title-container {
+  text-align: center;
+  flex: 1;
+}
+
+.title-container h1 {
+  font-size: 1.6rem;
+}
+
+.title-container h3 {
+  font-size: 0.9rem;
+  color: #d6eaf8;
+}
+
+/* === Menú === */
+.menu {
+  display: flex; /* Mostrar las opciones en una fila */
+  justify-content: flex-start; /* Alinea las opciones a la izquierda */
+  gap: 2rem; /* Espaciado entre las opciones */
+}
+
+.menu-list {
+  display: flex; /* Mostrar las opciones horizontalmente */
+  list-style: none; /* Elimina los puntos de lista */
+  padding: 0; /* Elimina el padding predeterminado */
+  margin: 0; /* Elimina el margen predeterminado */
+}
+
+.menu-list li {
+  margin: 0; /* Elimina el margen entre los elementos de la lista */
+}
+
+.menu-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu-list li a:hover {
+  background: #3498db;
+  transform: scale(1.05); /* Animación de hover */
+}
+
+/* === Hover Animación para el menú === */
+.menu-item:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* === Menú Ocultar opción seleccionada === */
+.menu-list li a.clicked {
+  display: none;
+}
+
+/* === Principal === */
+/* Contenedor principal */
+.principal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(to bottom, #f9f9f9, #eef3f7); /* degradado suave */
+}
+
+/* Título principal */
+.welcome {
+  font-size: 2.8rem;
+  color: #0d3c61;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* sombra suave */
+}
+
+/* Subtítulos */
+.subtitle {
+  font-size: 1.8rem;
+  color: #154360;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid #1a5276;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* Texto general */
+.subtext {
+  font-size: 1.15rem;
+  margin: 1rem auto;
+  color: #333;
+  line-height: 1.8;
+  max-width: 850px;
+}
+
+/* Lista de características */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  max-width: 750px;
+  text-align: left;
+}
+
+.features li {
+  background: #fff;
+  margin: 0.8rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.features li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* === Footer */
+.footer {
+  background: #1a5276;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .welcome {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  .features li {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+
+/* === Login === */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 2rem;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.login-container input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.login-container button {
+  padding: 0.7rem;
+  background: #2980b9;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background: #21618c;
+}
+
+/* === Layout de semanas === */
+.layout {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #1a5276;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 1px solid #5dade2;
+  padding-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  background: #21618c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background: #3498db;
+}
+
+/* Contenido */
+.contenido {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background: #fdfefe;
+}
+
+.contenido h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #154360;
+}
+
+.custom-button {
+  padding: 0.8rem 1.2rem;
+  margin: 0.3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #2874a6;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.custom-button:hover {
+  background: #1f618d;
+  transform: scale(1.05); /* Animación de hover */
+}
+
+/* === Menú Animaciones === */
+.menu-item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animación de desvanecimiento al pasar el mouse sobre el menú */
+.menu-item:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Visor */
+#visor-contenedor {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.visor {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.visor-mensaje {
+  margin: 1rem 0;
+  font-style: italic;
+  color: #555;
+}
+
+.about {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1a5276;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0d3c61;
+  margin-bottom: 0.3rem;
+}
+
+.career {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #154360;
+  margin-bottom: 1.2rem;
+}
+
+.about-text {
+  text-align: center;
+  max-width: 700px;
+}
+
+/* Para que siempre quede abajo */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* empuja el footer hacia abajo */
+}
+
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background: #083c5c; /* o tu color */
+  color: #fff;
+}
+
+/* === Botones especiales === */
+.btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+  margin: 0.3rem;
+}
+
+.btn-primary {
+  background: #2874a6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1f618d;
+}
+
+.btn-danger {
+  background: #c0392b;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #922b21;
+}
+
+.btn-warning {
+  background: #f39c12;
+  color: white;
+}
+
+.btn-warning:hover {
+  background: #d68910;
+}
+
+/* === Mensaje de bienvenida === */
+#welcome-message {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #154360;
+  font-weight: 600;
+}
+
+/* === Panel de administración === */
+#admin-panel {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#admin-panel a {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  background: #2874a6;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#admin-panel a:hover {
+  background: #1f618d;
+}
+
+/* === Formulario editar perfil === */
+#edit-profile {
+  display: none;
+  background: #fff;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#edit-profile input {
+  width: 90%;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

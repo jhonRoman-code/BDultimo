@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semanas - Base de Datos II</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra superior -->
+  <header class="navbar">
+  <div class="logo-container">
+    <img src="assets/logo/logo.png" alt="Logo" class="logo">
+  </div>
+  <div class="title-container"> 
+    <h1>Base de Datos II</h1>
+    <h3>ROMAN ROQUE JHON SMITH</h3>
+  </div>
+  <nav class="menu">
+    <ul class="menu-list" id="menu-list">
+      <li><a href="index.html" class="menu-item">Inicio</a></li>
+      <li><a href="login.html" class="menu-item">Login</a></li>
+      <li><a href="#" id="logout-link" style="display:none;">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Layout con sidebar -->
+  <main class="layout">
+    <!-- Sidebar de semanas -->
+    <aside class="sidebar">
+      <h2>CONTENIDO</h2>
+      <ul>
+        <li><button onclick="mostrarSemana(1)">Semana 1</button></li>
+        <li><button onclick="mostrarSemana(2)">Semana 2</button></li>
+        <li><button onclick="mostrarSemana(3)">Semana 3</button></li>
+        <li><button onclick="mostrarSemana(4)">Semana 4</button></li>
+        <li><button onclick="mostrarSemana(5)">Semana 5</button></li>
+        <li><button onclick="mostrarSemana(6)">Semana 6</button></li>
+        <li><button onclick="mostrarSemana(7)">Semana 7</button></li>
+        <li><button onclick="mostrarSemana(8)">Semana 8</button></li>
+        <li><button onclick="mostrarSemana(9)">Semana 9</button></li>
+        <li><button onclick="mostrarSemana(10)">Semana 10</button></li>
+        <li><button onclick="mostrarSemana(11)">Semana 11</button></li>
+        <li><button onclick="mostrarSemana(12)">Semana 12</button></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido dinámico -->
+    <section class="contenido">
+      <h2 id="titulo-semana">Selecciona una semana</h2>
+      
+      <!-- Formulario de subida (solo admin) -->
+      <div id="form-subida" style="display:none; margin-bottom:20px;">
+        <h3>Subir archivo</h3>
+        <form id="uploadForm" enctype="multipart/form-data">
+          <input type="file" name="archivo" id="archivo" required>
+          <button type="submit">Subir</button>
+        </form>
+      </div>
+
+      <!-- Contenido dinámico -->
+      <div id="contenido-semana">
+        <p>Elige una semana del menú lateral para ver su contenido aquí.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Proyecto Base de Datos II</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
