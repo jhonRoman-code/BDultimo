@@ -165,7 +165,7 @@ async function mostrarSemana(num) {
       html += "<p>No hay archivos subidos para esta semana.</p>";
     }
   } catch {
-    html += "<p style='color:red;'>Error al cargar archivos de la base de datos</p>";
+    html += "<p style='color:red;'></p>";
   }
 
   if (contenido) {
